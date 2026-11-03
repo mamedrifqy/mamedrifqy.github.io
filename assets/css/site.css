@@ -195,8 +195,13 @@ a:hover { text-decoration-thickness: 2px; }
 .plate p { font: italic 400 var(--step--1)/1.4 var(--serif); color: var(--ink-soft); margin-top: 0.15rem; }
 
 /* services */
-.services li { padding-block: 0.5rem; border-bottom: 1px solid var(--line); max-width: 34rem; display: flex; justify-content: space-between; gap: 1rem; }
-.services li span { color: var(--ink-soft); font-size: var(--step--1); align-self: center; }
+.services li { padding-block: 0.6rem; border-bottom: 1px solid var(--line); max-width: 36rem; display: flex; justify-content: space-between; align-items: baseline; gap: 0.25rem 1.5rem; flex-wrap: wrap; }
+.services li small { display: block; margin-top: 0.15rem; color: var(--ink-soft); font-size: var(--step--1); line-height: 1.45; }
+.services li span { color: var(--ink-soft); font-size: var(--step--1); }
+/* the magenta dot echoes the Dumai marker in the hero */
+.services li span.open { color: var(--ink); font-weight: 600; }
+.services li span.open::before { content: ""; display: inline-block; width: 0.5rem; height: 0.5rem; margin-right: 0.45rem; border-radius: 50%; background: var(--mag); }
+.services-cta { margin-top: 1.25rem; }
 
 /* contact */
 .mail { font: 500 clamp(1.4rem, 1rem + 2vw, 2.1rem)/1.2 var(--serif); overflow-wrap: anywhere; }
