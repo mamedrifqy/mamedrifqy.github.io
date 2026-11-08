@@ -163,16 +163,8 @@ a:hover { text-decoration-thickness: 2px; }
 .quotes cite b { display: block; color: var(--ink); font-weight: 600; }
 
 /* resume */
-.resume-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 3rem; }
-.resume-cols > div > * + * { margin-top: 1.5rem; }
-.entry h4 { font: 600 1.05rem/1.35 var(--serif); color: var(--ink); margin-top: 0; }
-.entry .when { font-size: var(--step--1); color: var(--ink-soft); font-weight: 500; }
-.entry .where { font: italic 400 1rem/1.4 var(--serif); }
-.entry ul { margin-top: 0.6rem; padding-left: 1.1rem; list-style: disc; font-size: 0.98rem; }
-.entry ul li { padding-block: 0.12rem; }
-.entry ul li::marker { color: var(--grat); }
-.entry p { margin-top: 0.5rem; font-size: 0.98rem; }
-.lead-link { font-weight: 600; }
+.btn { display: inline-block; margin-top: 0.5rem; padding: 0.7rem 1.4rem; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); border-radius: 2px; font-weight: 600; text-decoration: none; }
+.btn:hover, .btn:focus-visible { background: var(--mag); border-color: var(--mag); color: #fff; }
 
 /* galleries */
 .filters { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin-bottom: 1.75rem; }
@@ -250,7 +242,6 @@ a:hover { text-decoration-thickness: 2px; }
   .sheet > .wrap { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
   .sheet h2 { position: static; }
   .about-grid { grid-template-columns: minmax(0, 1fr); }
-  .resume-cols { grid-template-columns: minmax(0, 1fr); }
   /* on phones the bar scrolls away and the menu wraps, so no link is hidden off-screen */
   .bar { position: static; }
   .bar .wrap { flex-wrap: wrap; gap: 0.4rem 1rem; }
