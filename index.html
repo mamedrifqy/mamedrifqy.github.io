@@ -120,7 +120,7 @@
 <section class="sheet" id="resume">
 <div class="wrap"><h2>Resume</h2><div class="body">
 <p>Education, experience, skills, and publications are on my interactive resume.</p>
-<p><a class="btn" href="/resume">View my resume</a></p>
+<p><a class="btn" href="/resume" data-modal="resume-dialog">View my resume</a></p>
 </div></div>
 </section>
 <section class="sheet" id="activity">
@@ -311,6 +311,7 @@
 </div></div>
 </section>
 </main>
+<dialog id="resume-dialog" class="modal" aria-label="Resume"><div class="modal-bar"><a href="/resume" target="_blank" rel="noopener">Open in new tab</a><button type="button" data-close>Close</button></div><iframe title="Resume" data-src="/resume"></iframe></dialog>
 <dialog id="lightbox" class="lightbox" aria-label="Image viewer"><img alt=""><div class="cap"><span class="cap-text"></span><button type="button" data-close>Close</button></div></dialog>
 <footer class="foot"><div class="wrap">Muhammad Rifqy, Jakarta, Indonesia</div></footer>
 <script src="assets/js/site.js" defer></script>

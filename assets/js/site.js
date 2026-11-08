@@ -22,6 +22,25 @@
     });
   });
 
+  // Modal dialogs opened by [data-modal] links (fall back to the plain link without JS)
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-modal]");
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    var m = document.getElementById(a.getAttribute("data-modal"));
+    if (!m || typeof m.showModal !== "function") return;
+    e.preventDefault();
+    var f = m.querySelector("iframe[data-src]");
+    if (f && !f.getAttribute("src")) f.setAttribute("src", f.getAttribute("data-src"));
+    m.showModal();
+    if (!m.hasAttribute("data-bound")) {
+      m.setAttribute("data-bound", "");
+      m.addEventListener("click", function (ev) {
+        if (ev.target === m || ev.target.closest("[data-close]")) m.close();
+      });
+    }
+    m.addEventListener("close", function () { a.focus(); }, { once: true });
+  });
+
   // Lightbox (native <dialog>)
   var dlg = document.getElementById("lightbox");
   if (!dlg || typeof dlg.showModal !== "function") return;

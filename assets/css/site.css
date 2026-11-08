@@ -248,3 +248,12 @@ a:hover { text-decoration-thickness: 2px; }
   .bar nav { margin-left: 0; width: 100%; }
   .bar nav ul { flex-wrap: wrap; overflow: visible; gap: 0.2rem 1.15rem; }
 }
+
+/* ---- resume modal ---- */
+.modal { border: 0; padding: 0; width: min(96vw, 1100px); height: 92vh; background: var(--plate); color: var(--ink); overflow: hidden; }
+.modal[open] { display: flex; flex-direction: column; }
+.modal::backdrop { background: rgba(14, 43, 59, 0.9); }
+.modal-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--line); font-size: var(--step--1); }
+.modal-bar button { font: 500 var(--step--1)/1 var(--sans); color: var(--ink); background: none; border: 1px solid var(--line); border-radius: 2px; padding: 0.5rem 0.9rem; cursor: pointer; }
+.modal-bar button:hover { background: var(--sea); }
+.modal iframe { flex: 1; width: 100%; border: 0; }
